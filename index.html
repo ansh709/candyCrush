@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Candy Crush</title>
+
+    <style>
+        body {
+            max-width: 100vh;
+            display: flex;
+            background-image: url(images/bg01.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        .grid {
+            height: 560px;
+            min-width: 560px;
+            display: flex;
+            flex-wrap: wrap;
+            margin-left: 16px;
+            margin-top: 50px;
+            background-color: rgba(109, 127, 151, 0.5);
+            padding: 5px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5) inset, 0 1px 0 #fff;
+            color: #85796b;
+        }
+        
+        .grid div {
+            height: 70px;
+            width: 70px;
+        }
+        
+        .score {
+            background-color: rgb(255 192 203);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            background-image: linear-gradient(rgb(255 182 193), rgb(255 192 203));
+            box-shadow: 0 2px 4px rgb(0 0 0 / 50%) inset, 0 1px 0 #fff;
+            color: rgb(133 121 107);
+            position: absolute;
+            width: 12%;
+            padding: 10px;
+            right: 203px;
+            top: 169px;
+        }
+        
+        @media (max-width:1200px) {
+            .score {
+                background-color: rgb(255 192 203);
+                border-radius: 10px;
+                display: flex;
+                align-items: center;
+                text-align: center;
+                background-image: linear-gradient(rgb(255 182 193), rgb(255 192 203));
+                box-shadow: 0 2px 4px rgb(0 0 0 / 50%) inset, 0 1px 0 #fff;
+                color: rgb(133 121 107);
+                position: absolute;
+                width: 100%;
+                padding: 10px;
+            }
+            .grid {
+                height: 560px;
+                min-width: 560px;
+                display: flex;
+                flex-wrap: wrap;
+                margin-left: 16px;
+                margin-top: 50px;
+                background-color: rgb(109 127 151 / 50%);
+                padding: 5px;
+                border-radius: 10px;
+                box-shadow: 0 2px 4px rgb(0 0 0 / 50%) inset, 0 1px 0 #fff;
+                color: rgb(133 121 107);
+                position: relative;
+                top: 131px;
+                left: -22px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grid"></div>
+    <div class="score">
+        <h1>Score =
+            <h2 id="showScore"></h2>
+        </h1>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
